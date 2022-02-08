@@ -1,5 +1,5 @@
-import Home from '../components/Home'
-import About from '../components/About.vue'
+import Home from "@/view/home"
+import About from "@/components/About"
 import {
     createRouter,
     createWebHashHistory
