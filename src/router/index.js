@@ -1,13 +1,13 @@
 import {
     createRouter,
-    createMemoryHistory,
     createWebHistory
 } from 'vue-router';
-import Home from '../views/Home.vue';
-import About from '../views/About.vue';
 
-const isServer = typeof window === 'undefined';
-const history = isServer ? createMemoryHistory() : createWebHistory();
+import Home from '../components/Home.vue';
+import About from '../components/About.vue';
+import User from '../components/User.vue';
+import NotFound from '../components/NotFound.vue';
+
 const routes = [{
         path: '/',
         name: 'Home',
@@ -18,10 +18,19 @@ const routes = [{
         name: 'About',
         component: About,
     },
+    {
+        path: '/user/:name',
+        component: User,
+        props: true
+    },
+    {
+        path: '/:catchAll(.*)',
+        component: NotFound,
+    },
 ];
 
 const router = createRouter({
-    history,
+    history: createWebHistory(),
     routes,
 });
 

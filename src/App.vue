@@ -3,9 +3,11 @@
     <nav>
       <h1>
         <router-link :to="{name: 'Home'}">Home</router-link> |
-        <router-link :to="{name: 'About'}">About</router-link>
+        <router-link :to="{name: 'About'}">About</router-link> |
+        <router-link to="/User/putra">User</router-link>
       </h1> 
     </nav>
+    <router-view/>
   </div>
 </template>
 

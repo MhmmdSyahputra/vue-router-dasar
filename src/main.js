@@ -1,9 +1,9 @@
 import {
     createApp
-} from 'vue'
+} from 'vue';
 
-import App from './App.vue'
+import App from './App.vue';
 //import router nya
-import router from './router'
+import router from './router';
 
-createApp(App).use(router).mount('#app')
+createApp(App).use(router).mount('#app');
